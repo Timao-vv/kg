@@ -3,7 +3,7 @@ package com.kugou.constants
 /**
   * Created by idea on 2018/5/7.
   */
-object GlobalContants {
+object GlobalConstants {
 
   //默认值
   final val DEFAULT_VALUE = "unknown"
