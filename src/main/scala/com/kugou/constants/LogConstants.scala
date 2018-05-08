@@ -8,7 +8,7 @@ object LogConstants {
   //hbase存放日志的表
   final val LOG_HBASE_TABLE: String = "kugou_music_log"
   //标的列族
-  final val lOG_HBASE_TABLE_FAMILY: String = "log"
+  final val LOG_HBASE_TABLE_FAMILY: String = "log"
 
   //国家
   final val LOG_COLUMNS_NAME_COUNTRY = "country"
@@ -21,7 +21,7 @@ object LogConstants {
   //用户访问时间
   final val LOG_COLUMNS_NAME_ACCESS_TIME = "accessTime"
   //请求方式
-  final val LOG_COLUMNS_NAME_REQUEST_TYPR = "requestType"
+  final val LOG_COLUMNS_NAME_REQUEST_TYPE = "requestType"
   //用户行为标识
   final val LOG_COLUMNS_NAME_BEHAVIOR_FLAG = "behaviorFlag"
   //用户行为数据
@@ -32,7 +32,8 @@ object LogConstants {
   final val LOG_COLUMNS_NAME_OS_VERSION = "osVersion"
   //设备型号
   final val LOG_COLUMNS_NAME_MODEL_NUM = "modeNum"
-
+  //设备id
+  final val LOG_COLUMNS_NAME_DEVICE_ID = "deviceId"
 
 
 }
