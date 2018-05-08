@@ -60,7 +60,7 @@ object AnalysisLog {
   }
 
   def main(args: Array[String]): Unit = {
-    //Logger.getLogger("org").setLevel(Level.WARN)
+    Logger.getLogger("org").setLevel(Level.WARN)
     val sparkConf = new SparkConf().setAppName(this.getClass.getSimpleName).setMaster("local[*]")
     //验证参数是否正确
     processArgs(sparkConf, args)
@@ -70,7 +70,7 @@ object AnalysisLog {
     val sparkSession = SparkSession.builder().config(sparkConf).getOrCreate()
     import sparkSession.implicits._
     //加载ip规则库
-    val ipRules: Array[IPRule] = sparkSession.read.textFile("/spark_sf_project/resource/ip.data").map(line => {
+    val ipRules: Array[IPRule] = sparkSession.read.textFile("/text/ip.data").map(line => {
       val fields = line.split("[|]")
       IPRule(fields(2).toLong, fields(3).toLong, fields(5), fields(6), fields(7))
     }).collect()
